@@ -20,7 +20,6 @@
         "serve:images": "onchange \"src/images\" -- run-s build:images",
         "serve:fonts": "onchange \"src/fonts\" -- run-s build:fonts",
         "serve:icons": "onchange \"src/icons\" -- run-s build:icons",
-        "serve:sitemap": "onchange \"src/sitemap\" -- run-s build:sitemap",
         "serve": "run-p sync serve:*",
         "build:html": "run-s minify-html",
         "build:css": "run-s lint-scss scss autoprefixer",
@@ -28,7 +27,6 @@
         "build:images": "run-s imagemin",
         "build:fonts": "rsync -azP --delete src/fonts/ public/fonts/",
         "build:icons": "rsync -azP src/icons/ public/",
-        "build:sitemap": "rsync -azP src/sitemap/ public/",
         "build": "run-s build:*"
     },
     "devDependencies": {
